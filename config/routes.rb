@@ -55,7 +55,10 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root 'tracker#dashboard'
+  #root 'tracker#dashboard'
+  root 'users#new'
   get  'tracker/dashboard'
   get '/signup', to: 'users#new'
+  get  '/signup',  to: 'users#new'
+  resources :users
 end
