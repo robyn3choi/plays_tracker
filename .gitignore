@@ -17,3 +17,6 @@
 
 # Ignore notes
 /notes
+
+# ignore .DS_Store
+.DS_Store

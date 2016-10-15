@@ -1,7 +1,20 @@
 Rails.application.routes.draw do
-  get 'users/new'
 
-  # The priority is based upon order of creation: first created -> highest priority.
+  #root 'tracker#dashboard'
+  root 'users#new'
+  get  'tracker/dashboard'
+  get  '/signup',  to: 'users#new'
+    get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+  resources :users
+end
+
+
+
+
+
+ # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
@@ -55,10 +68,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  #root 'tracker#dashboard'
-  root 'users#new'
-  get  'tracker/dashboard'
-  get '/signup', to: 'users#new'
-  get  '/signup',  to: 'users#new'
-  resources :users
-end
