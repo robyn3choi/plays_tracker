@@ -35,6 +35,9 @@ gem 'google-api-client', '0.8.2', require: 'google/api_client'
 
 gem 'figaro'
 
+gem 'will_paginate',           '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
